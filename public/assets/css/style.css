@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+:root {
+    --default: #ffffff;
+    --other: #bebebe;
+    --accent: #6adcff;
+    --main-background: #1f2435;
+    --background: #2d313f;
+    --bar: #0000005b;
+    --font: 'Inconsolata';
+}
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--main-background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: .02em;
+}
+
+*:not(i) {
+    font-family: var(--font), cursive;
+}
+
+a {
+    color: var(--accent);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+p {
+    font-size: clamp(0.5rem, 4vw, 1rem);
+    line-height: 2;
+    color: var(--other);
+    margin: 0;
+}
+
+p > a {
+    color: var(--default);
+    transition: all 0.2s ease;
+}
+
+
+
+li {
+    color: var(--other);
+}
+
+li > b {
+    color: var(--accent);
+}
+
+p > a:hover {
+    color: var(--accent);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    line-height: 1.2;
+  }
+
+h1 {
+    font-size: clamp(1.5rem, 8vw, 4rem);
+    color: var(--default);
+    position: relative;
+    z-index: 1;
+    text-shadow: 0px 0px 64px var(--accent);
+}
+
+h1 span {
+    display: inline-block;
+    color: var(--accent);
+}
+
+
+h3{
+    letter-spacing: 0.225em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: clamp(1.4rem, 8vw, 1.5rem);
+    color: var(--accent);
+    text-shadow: 0px 0px 48px var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: clamp(0.75rem, 6vw, 1.25rem);
+    color: var(--default);
+    transition: all 0.2s ease;
+}
+
+h4 span {
+    color: var(--accent);
+    text-shadow: 0px 0px 64px var(--accent);
+}
+
+a>h4:hover {
+    color: var(--accent);
+}
+
+h5 {
+    font-size: clamp(1rem, 6vw, 1.5rem);
+    color: var(--default);
+}
+
+h5 span {
+    color: var(--accent);
+    text-shadow: 0px 0px 64px var(--accent);
+}
+
+h6 {
+    letter-spacing: 0.225em;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 6vw, 1.25rem);
+    font-weight: bold;
+    color: var(--accent);
+    text-shadow: 0px 0px 48px var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+h7 {
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--default);
+    font-size: clamp(0.5rem, 4vw, 1rem);
+}
+
+h7 span {
+    color: var(--accent);
+    text-shadow: 0px 0px 48px var(--accent);
+}
+
+.extra-top-padding {
+    padding-top: 4vmax;
+}
+
+.extra-bottom-padding-text {
+    margin-bottom: 1rem;
+}
+
+.center-text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.main-background {
+    position: fixed;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -10;
+    opacity: .2;
+    filter: hue-rotate(200deg) blur(1rem) grayscale(25%);
+}
+
+section {
+    padding: 2vmax 2vw;
+    margin: 0;
+}
+
+section .container {
+    margin: auto;
+    max-width: 1200px;
+}
+
+section .container.large {
+    max-width: 1400px;
+}
+
+section .container > object {
+    height: clamp(96px, 80vw, 800px);
+}
+
+section img.big {
+    border-radius: 32px;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    min-height: 10rem;
+    max-height: 15rem;
+    box-shadow: 2px 2px 12px rgba( 0, 0, 0, 0.5 );
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+	justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    position: relative;
+    margin-bottom: 2vmax;
+    overflow: hidden;
+    background: radial-gradient( ellipse at bottom, var(--background), var(--main-background) );
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.4);
+}
+
+header .container {
+    text-align: center;
+    padding: 8vmax 0;
+}
+
+header img {
+    position: relative;
+    width: clamp(96px, 50%, 256px);
+    height: clamp(96px, 50%, 256px);
+    overflow: hidden;
+    border-radius: 50%;
+    border: thick double var(--accent);
+}
+
+header video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: .2;
+    filter: blur(4px) grayscale(25%);
+}
+/* ---- */
+
+/* Social */
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    row-gap: 0;
+}
+
+.socials a {
+    line-height: 0;
+}
+
+.socials svg {
+    fill: var(--default);
+    height: clamp(1rem, 7vw, 2rem);
+    width: clamp(1rem, 7vw, 2rem);
+    transition: all 0.2s ease;
+}
+
+.socials svg:hover {
+    fill: var(--accent);
+}
+/* ---- */
+
+/* Cards */
+.card-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-row .card {
+    display: flex;
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+}
+
+.card-row .card-image
+{
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 150px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card h7 {
+    margin-top: 0.5rem;
+ }
+
+.card-image {
+    position: relative;
+    display: flex;
+    align-content: start;
+    justify-content: end;
+    flex-direction: column;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    height: 100%;
+    transition: all 0.1s;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+ }
+
+ .card-image:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: scale(1.025);
+ }
+
+ .card-image svg {
+    position: absolute;
+    margin: auto;
+    inset: 0;
+    height: clamp(3.5rem, 7vw, 4.5rem);
+    width: clamp(3.5rem, 7vw, 4.5rem);
+    fill: #FF0000;
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4));
+ }
+
+ .card-image img {
+    position: absolute;
+    margin: auto;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    height: clamp(2.5rem, 7vw, 3.5rem);
+    width: clamp(2.5rem, 7vw, 3.5rem);
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4));
+ }
+
+ .card-image a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+ }
+
+ .card-image video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+ }
+
+@media screen and (min-width: 368px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card-tall {
+        grid-row: span 2 / auto;
+    }
+
+    .card-tall > .card-image {
+        height: 400px;
+    }
+
+    .card-super-tall {
+        grid-row: span 4 / auto;
+    }
+
+    .card-wide {
+        grid-column: span 2 / auto;
+    }
+
+    .card-super-wide {
+        grid-column: span 4 / auto;
+    }
+
+    .card-across {
+        grid-column: 1 / -1;
+    }
+    
+    .card-grid {
+        grid-auto-rows: 200px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card-row {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+/* ---- */
+
+/* Logo */
+.logo {
+    width: 200px;
+    height: 55px;
+    position: relative;
+    padding-left: 1rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+    background-image: linear-gradient( 70deg, var(--main-background), rgba( 20, 0, 0, 0 ) );
+}
+
+.logo-image {
+    background-repeat: no-repeat !important;
+    background-size: contain;
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    -o-background-size: contain !important;
+    width: 150px;
+    height: 35px;
+}
+
+.small-logo {
+    height: clamp(32px, 8vw, 96px);
+}
+
+.platform {
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    column-gap: 0.4rem;
+}
+
+.platform:hover>svg {
+    fill: var(--accent);
+}
+
+.platform:hover>h5 {
+    color: var(--accent);
+}
+
+.platform svg {
+    fill: var(--default);
+    height: clamp(1.25rem, 7vw, 2rem);
+    width: clamp(1.25rem, 7vw, 2rem);
+    transition: all 0.2s ease;
+}
+
+.platform h5 {
+    position: relative;
+    font-weight: bold;
+    top: 5px;
+    transition: all 0.2s ease;
+}
+/* ---- */
+
+/* Tools */
+.tools {
+    padding: 1vmax 0;
+}
+
+.tools .container {
+    padding: 0;
+}
+
+.tools img {
+    height: clamp(2rem, 18vw, 12rem);
+    width: clamp(2rem, 18vw, 12rem);
+    background-repeat: no-repeat !important;
+    background-size: contain;
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    -o-background-size: contain !important;
+    filter: drop-shadow(1rem 0.5rem 1rem rgba(0, 0, 0, 0.5));
+}
+/* ---- */
+
+
+/* Navigation Bar */
+nav {
+    position: relative;
+    background: var(--bar);
+    margin-top: auto;
+    padding: 1rem 5vw;
+    z-index: 10;
+}
+
+nav .row {
+    margin: auto;
+    max-width: 1600px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    justify-content: start;
+
+}
+
+nav .index {
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+}
+
+nav .index a {
+    margin-left: 3vw;
+}
+
+nav a > h7 {
+    color: var(--other);
+    transition: all 0.2s ease;
+}
+
+nav a:hover > h7 {
+    color: var(--accent);
+}
+
+nav .current h7 {
+    color: var(--accent);
+    text-shadow: 0px 0px 48px var(--accent);
+}
+
+@media screen and (max-width: 768px) {
+    nav h7 {
+        font-size: clamp(0.5rem, 3vw, 1rem);
+    }
+}
+/* ---- */
+
+/* Footer */
+footer-component {
+    margin-top: auto;
+    padding-top: 2vmax;
+}
+
+footer {
+    background: var(--bar);
+    padding: 1rem 5vw;
+    z-index: 10;
+}
+
+footer .row {
+    margin: auto;
+    max-width: 1600px;
+    text-align: start;
+}
+
+footer h7 {
+    flex-grow: 1;
+    color: var(--other);
+}
+
+footer .socials svg {
+    fill: var(--other);
+}
+/* ---- */

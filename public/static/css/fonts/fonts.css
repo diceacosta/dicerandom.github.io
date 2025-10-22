@@ -1,0 +1,39 @@
+@font-face {
+    font-family: Garamond;
+    src: url("Garamond/Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Garamond;
+    src: url("Garamond/Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url("HelveticaNeue/HelveticaNeue-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: Garamond;
+    src: url("Garamond/Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: Newspaper;
+    src: url("Newspaper.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: PixelArial;
+    src: url("Pixel/PIXEARG_.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: PixelArial;
+    src: url("Pixel/PIXEAB__.TTF") format("truetype");
+    font-weight: bold;
+}
+

@@ -1,0 +1,24 @@
+# variables:
+#   HEROKU_APP_NAME: "webblog-dice"
+#   HEROKU_PRODUCTION_KEY: "HRKU-8d4b5779-26e8-4dc1-91d7-7681f89c41af"
+
+# heroku_deploy:
+#   stage: deploy
+#   script:
+#     - apt-get update -yq
+#     - apt-get install -y ruby ruby-dev rubygems-integration
+#     - gem install dpl
+#     - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY
+
+
+pages:
+  stage: deploy
+  script:
+  - echo 'Nothing to do...' 
+  # - heroku git:remote -a webblog-dice
+  artifacts:
+    paths:
+    - public
+    expire_in: 1 day
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
