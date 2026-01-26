@@ -1,0 +1,147 @@
+{{ define "main" }}
+
+
+<h1>About</h1>
+<div>
+
+    <p>I've been a software engineer since I was 14.</p>
+    <p>I like coding and writing</p>
+</div>
+
+
+<h1>Latest posts</h1>
+
+<div class="posts-list">
+    {{ with .Site.GetPage "/posts" }}
+    {{ range first 3 (sort .Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+    <div class="post">
+        <p>
+        <div class="date">{{ .Date | time.Format ":date_medium" }}</div>
+        <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+        <!-- {{ .Summary }} -->
+        </p>
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
+
+
+<h1>Jobs</h1>
+
+<table>
+    <tr>
+        <th><a href="https://skybydos.com">Drone Overwatch Solutions</a></th>
+        <th>Full Stack Engineer</th>
+        <th>Jun 25 - Aug 25</th>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <ul>
+                <li>Develop responsive front-end apps with React + Vite for drone control and data visualization</li>
+                <li>Build and scale Node.js/Express back-end services for real-time operations</li>
+                <li>Own deployment, testing, and optimization of full-stack systems</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th><a href="https://pbfb.org/">Pompano Fire Benevolent</a></th>
+        <th>Lead Software Engineer</th>
+        <th>Aug 23 - Oct 23</th>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <ul>
+                <li>Optimized and deployed an existing website as part of contract work.</li>
+                <li>Updated the backend of the website with a new modern system.</li>
+                <li>Designed an in-website donation system and managed payments.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th><a href="https://pompanofiremuseum.com/">Pompano Beach Fire Museum</a></th>
+        <th>Software Engineer</th>
+        <th>May 21 - Jun 21</th>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <ul>
+                <li>I was 16.</li>
+                <li>Orchestrated the creation of the site.</li>
+                <li>Created a system for managing server-side operations.</li>
+                <li>Built and deployed a system for handling ticket purchases on-site.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<br />
+
+<h1>Projects</h1>
+
+<table>
+    <tr>
+        <th><a href="https://inktrail.app/">InkTrail</a></th>
+        <th>Aug 25 -</th>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <ul>
+                <li>Created a full-stack reading app using Vue, React, Supabase, and Vercel.</li>
+                <li>Built core features including user authentication, dynamic content rendering, and real-time database
+                    interactions.</li>
+                <li>Managed the end-to-end product lifecycle from ideation and UI/UX design to deployment and
+                    maintenance.</li>
+                <li>Actively gathered and incorporated user feedback. Using live A/B testing</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>Game Engineer</th>
+        <th>Sep 17 -</th>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <ul>
+                <li>Designed and optimized real-time gameplay systems with a focus on physics simulation, locomotion,
+                    and user
+                    interaction.</li>
+                <li>Developed, tested, and deployed gameplay features using agile development practices.</li>
+                <li>Applied iterative improvements from playtesting feedback to enhance stability, performance, and
+                    player
+                    engagement.</li>
+                <li>Leveraged multiple programming languages and tools to meet diverse client and project requirements.
+                </li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<br />
+
+
+<!-- <h1>Latest photos</h1>
+
+<div class="image-grid">
+{{ with .Site.GetPage "/photos" }}
+    {{ range first 3 (sort .Pages "Date" "desc")}}
+        <a href="{{ .Permalink }}" title="{{ .Title }}">
+        {{ $image := .Page.Resources.GetMatch .Params.image }}
+        {{ with $image }}
+            {{ $thumb := .Resize "400x" }}
+            <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
+        {{end}}
+        </a>
+    {{ end }}
+{{ end }}
+</div> -->
+
+{{ end }}

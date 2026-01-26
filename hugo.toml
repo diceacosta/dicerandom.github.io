@@ -1,0 +1,9 @@
+baseURL = 'https://dicea.dev/'
+languageCode = 'en-us'
+title = 'dice'
+theme = 'hugo-theme-console'
+
+
+[[params.navlinks]]
+  name = "Posts"
+  url = "/posts/"

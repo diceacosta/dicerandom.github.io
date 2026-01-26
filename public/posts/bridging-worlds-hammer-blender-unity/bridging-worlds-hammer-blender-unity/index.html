@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>dice/posts/bridging-worlds-hammer-blender-unity/bridging-worlds-hammer-blender-unity/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/terminal-0.7.4.min.css">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="Bridging Worlds: Using Hammer, Blender, and Unity Together" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/bridging-worlds-hammer-blender-unity/bridging-worlds-hammer-blender-unity/" /><meta property="article:published_time" content="2025-04-16T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="Bridging Worlds: Using Hammer, Blender, and Unity Together"/>
+<meta name="twitter:description" content="When I first started making maps, it was in the Hammer Editor for the Source Engine. Hammer was my creative playground — fast, simple, and deeply familiar. It’s a tool built for a very specific purpose: making levels for games like Half-Life 2, Counter-Strike: Source, and Portal.
+For years, I assumed those skills would stay locked inside those games forever.
+Recently, while working in Unity, I had a realization: the tools we know best can still serve us in modern workflows. In this post, I’ll walk through how to take a map made in Hammer, bring it into Blender using the Plumber plugin, export it as FBX, and import it into Unity."/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="http://localhost:1313/" class="no-style ">dice</a>:~# 
+              <a href='http://localhost:1313/posts'>posts</a>/<a href='http://localhost:1313/posts/bridging-worlds-hammer-blender-unity'>bridging-worlds-hammer-blender-unity</a>/<a href='http://localhost:1313/posts/bridging-worlds-hammer-blender-unity/bridging-worlds-hammer-blender-unity'>bridging-worlds-hammer-blender-unity</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/posts/">
+                    <span property="name">Posts</span></a>
+                    <meta property="position" content="1" />
+                </li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container " >
+        
+<h1>Bridging Worlds: Using Hammer, Blender, and Unity Together</h1>
+
+Apr 16, 2025
+
+
+<br/><br/>
+<p>When I first started making maps, it was in the <strong>Hammer Editor</strong> for the Source Engine. Hammer was my creative playground — fast, simple, and deeply familiar. It’s a tool built for a very specific purpose: making levels for games like <em>Half-Life 2</em>, <em>Counter-Strike: Source</em>, and <em>Portal</em>.</p>
+<p>For years, I assumed those skills would stay locked inside those games forever.</p>
+<p>Recently, while working in <strong>Unity</strong>, I had a realization: the tools we know best can still serve us in modern workflows. In this post, I’ll walk through how to take a map made in Hammer, bring it into <strong>Blender</strong> using the <strong>Plumber</strong> plugin, export it as FBX, and import it into Unity.</p>
+<p>More importantly, I’ll explain <em>why</em> it’s worth embracing old tools alongside new ones.</p>
+<hr>
+<h2 id="why-start-in-hammer">Why Start in Hammer?</h2> <p>If you’ve spent time modding Source games, you probably have strong muscle memory for Hammer. You know how units feel, how to align brushes, and how to block out a layout quickly and intuitively.</p>
+<p>In many cases, I can prototype a level layout faster in Hammer than I can in Unity or Blender — even though those tools are more modern and powerful.</p>
+<p>Instead of fighting a new toolset at the earliest stage, you can leverage what you already know. That means focusing on the creative part of level design instead of UI friction.</p>
+<hr>
+<h2 id="the-workflow">The Workflow</h2> <p>Here’s the full pipeline, step by step.</p>
+<hr>
+<h2 id="step-1-build-a-map-in-hammer">Step 1: Build a Map in Hammer</h2> <p>Start by creating a simple level using the Source SDK’s Hammer Editor. Keep it clean and focused on layout rather than detail.</p>
+<p>When you’re finished, save the map as a <code>.VMF</code> file (Valve Map Format).</p>
+<hr>
+<h2 id="step-2-import-into-blender-with-plumber">Step 2: Import into Blender with Plumber</h2> <p>Instead of converting files externally, use <strong>Plumber</strong>, a Blender add-on that directly reads VMF and BSP files. It imports them as structured 3D scenes, including materials and textures.</p>
+<p><strong>How to use Plumber:</strong></p>
+<ol>
+<li>Install Plumber via Blender’s Add-on preferences.</li>
+<li>Go to <strong>File → Import → Source Engine VMF/BSP</strong>.</li>
+<li>Select your <code>.VMF</code> file and import it.</li>
+</ol>
+<hr>
+<h2 id="step-3-unpack-textures-for-export">Step 3: Unpack Textures for Export</h2> <p>After import, Blender links Source textures internally. Before exporting to Unity, you’ll want those textures saved to disk.</p>
+<p>In Blender:</p>
+<ol>
+<li>Go to <strong>File → External Data → Unpack Resources</strong></li>
+<li>Choose <strong>Unpack All Into Files</strong></li>
+</ol>
+<p>This extracts the textures into a local folder, ensuring they survive the export process.</p>
+<hr>
+<h2 id="step-4-export-to-fbx">Step 4: Export to FBX</h2> <p>Once the map looks correct in Blender:</p>
+<ul>
+<li>Clean up extra geometry if needed</li>
+<li>Fix any normals or shading issues</li>
+<li>Apply transforms</li>
+</ul>
+<p>Then export:</p>
+<ul>
+<li><strong>File → Export → FBX</strong></li>
+<li>Apply transforms</li>
+<li>Use an FBX version between <strong>2013–2018</strong> for best Unity compatibility</li>
+</ul>
+<hr>
+<h2 id="step-5-bring-it-into-unity">Step 5: Bring It Into Unity</h2> <p>Import the FBX file into your Unity project and drag it into a scene.</p>
+<p>In Unity, you’ll likely want to:</p>
+<ul>
+<li>Reassign or fine-tune materials</li>
+<li>Add colliders for gameplay</li>
+<li>Adjust scale and lighting</li>
+<li>Set up player navigation</li>
+</ul>
+<p>Just like that, your Hammer map is alive inside a modern engine.</p>
+<hr>
+<h2 id="what-this-teaches-us">What This Teaches Us</h2> <p>This isn’t just a technical trick — it’s a mindset shift.</p>
+<p>There’s often pressure to abandon old tools when new ones appear. But mastery doesn’t expire. The skills you built years ago are still valuable, especially for rapid iteration and prototyping.</p>
+<p>Workflows don’t have to be linear or “correct.” They can be personal, hybrid, and efficient. The important thing isn’t <em>which</em> tool you use — it’s how effectively you use it.</p>
+<hr>
+<h2 id="final-thoughts">Final Thoughts</h2> <p>Your experience with tools like Hammer isn’t obsolete — it’s an asset. In fact, it may be the fastest way to prototype ideas inside modern engines.</p>
+<p>By combining <strong>Hammer</strong>, <strong>Plumber</strong>, <strong>Blender</strong>, and <strong>Unity</strong>, you’re building a creative bridge between generations of technology.</p>
+<p>Next time you start a new project, ask yourself:</p>
+<blockquote>
+<p><em>What old tools or skills could help me get started faster?</em></p>
+</blockquote>
+<p>You might already have the answer.</p>
+<hr>
+<h2 id="resources--tools">Resources &amp; Tools</h2> <ul>
+<li>Hammer Editor (Source SDK)</li>
+<li>Plumber (Blender Add-on)</li>
+<li>Blender</li>
+<li>Unity Engine</li>
+</ul>
+<hr>
+<h2 id="ideas-to-try">Ideas to Try</h2> <ul>
+<li>Import an old map you made years ago into Unity</li>
+<li>Use this workflow for graybox blockouts</li>
+<li>Share your hybrid workflows with other developers</li>
+</ul>
+
+
+
+        <div class="footer">
+    Dice Acosta
+</div>
+
+    </div>
+  </body>
+</html>

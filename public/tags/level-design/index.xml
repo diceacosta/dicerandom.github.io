@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Level-Design on dice</title>
+    <link>http://localhost:1313/tags/level-design/</link>
+    <description>Recent content in Level-Design on dice</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/level-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Hammer to Unity</title>
+      <link>http://localhost:1313/posts/from-hammer-to-unity/</link>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/from-hammer-to-unity/</guid>
+      <description>&lt;p&gt;When I first started making maps, it was in the &lt;strong&gt;Hammer Editor&lt;/strong&gt; for the Source Engine. Hammer was my creative playground — fast, simple, and deeply familiar. It’s a tool built for a very specific purpose: making levels for games like &lt;em&gt;Half-Life 2&lt;/em&gt;, &lt;em&gt;Counter-Strike: Source&lt;/em&gt;, and &lt;em&gt;Portal&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;For years, I assumed those skills would stay locked inside those games forever.&lt;/p&gt;&#xA;&lt;p&gt;Recently, while working in &lt;strong&gt;Unity&lt;/strong&gt;, I had a realization: the tools we know best can still serve us in modern workflows. In this post, I’ll walk through how to take a map made in Hammer, bring it into &lt;strong&gt;Blender&lt;/strong&gt; using the &lt;strong&gt;Plumber&lt;/strong&gt; plugin, export it as FBX, and import it into Unity.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

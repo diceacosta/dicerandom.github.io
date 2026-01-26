@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on dice</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on dice</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gameboy Emulator Part 2</title>
+      <link>http://localhost:1313/posts/gameboyemulator2/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gameboyemulator2/</guid>
+      <description>&lt;p&gt;Alright now for fresh pair of eyes on this project!&lt;/p&gt;&#xA;&lt;p&gt;Now &lt;code&gt;NO$GMB&lt;/code&gt; is great but it only supports Windows/DOS, no Linux support. Sucks for an arch user.&#xA;I don&amp;rsquo;t want to be switching so I need to try wine.&lt;/p&gt;&#xA;&lt;h2 id=&#34;wine&#34;&gt;Wine&lt;/h2&gt; &lt;p&gt;It worked out of the box.&#xA;&lt;img src=&#34;wine.png&#34; alt=&#34;wine finally working&#34; class=&#34;img-responsive&#34;&gt; &lt;/p&gt;&#xA;&lt;p&gt;damn&lt;/p&gt;&#xA;&lt;h2 id=&#34;tilesets-again&#34;&gt;Tilesets again.&lt;/h2&gt; &lt;p&gt;I was getting stuck in a loop, found out that the loop is waiting to hear back from the LCD.&#xA;After add that to my memory. I need to add more opcodes..&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gameboy Emulator Part 1</title>
+      <link>http://localhost:1313/posts/gameboyemulator/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gameboyemulator/</guid>
+      <description>&lt;p&gt;I was quite bored one day, with not much on my plate, I decided to create a GameBoy emulator.&#xA;How hard can it be, after all it&amp;rsquo;s most CS students first real C project (or an emulator of some kind)&#xA;Alright so where do I start.&lt;/p&gt;&#xA;&lt;h2 id=&#34;memory&#34;&gt;Memory&lt;/h2&gt; &lt;p&gt;Different sources can refer to memory regions differently. High RAM is sometimes called Zero Page Memory, Cartridge Data is sometimes just called ROM, and if a document just says RAM, it is usually refering to the Working RAM. Being aware of this is essential when reading through documents written by different people.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>From Hammer to Unity</title>
+      <link>http://localhost:1313/posts/from-hammer-to-unity/</link>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/from-hammer-to-unity/</guid>
+      <description>&lt;p&gt;When I first started making maps, it was in the &lt;strong&gt;Hammer Editor&lt;/strong&gt; for the Source Engine. Hammer was my creative playground — fast, simple, and deeply familiar. It’s a tool built for a very specific purpose: making levels for games like &lt;em&gt;Half-Life 2&lt;/em&gt;, &lt;em&gt;Counter-Strike: Source&lt;/em&gt;, and &lt;em&gt;Portal&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;For years, I assumed those skills would stay locked inside those games forever.&lt;/p&gt;&#xA;&lt;p&gt;Recently, while working in &lt;strong&gt;Unity&lt;/strong&gt;, I had a realization: the tools we know best can still serve us in modern workflows. In this post, I’ll walk through how to take a map made in Hammer, bring it into &lt;strong&gt;Blender&lt;/strong&gt; using the &lt;strong&gt;Plumber&lt;/strong&gt; plugin, export it as FBX, and import it into Unity.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
