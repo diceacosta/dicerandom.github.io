@@ -93,4 +93,10 @@
         </url>
         
     
+        
+        <url>
+            <loc>http://localhost:1313/esmb/</loc>
+        </url>
+        
+    
 </urlset>
